@@ -4,6 +4,11 @@ import pandas as pd
 import pyphen
 
 # st.set_page_config(page_title="Análise Gramatical e Separação Silábica em Português", page_icon=":book:", layout="wide")
+try:
+    nlp = spacy.load('pt_core_news_lg')
+except OSError:
+    spacy.cli.download("pt_core_news_lg")
+    nlp = spacy.load('pt_core_news_lg')
 
 def separar_silabas_personalizado(palavra):
     casos_especiais = {
