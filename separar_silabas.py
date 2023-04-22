@@ -55,7 +55,7 @@ nlp = spacy.load("pt_core_news_lg")
 #             </style>
 #             """
 # st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-st.title("Análise Gramatical e Separação Silábica em Português")
+st.title("Análise Gramatical e Separação Silábica em Português (MarceloFullstack)")
 palavra = st.text_input("Digite uma palavra em português:")
 
 if palavra:
